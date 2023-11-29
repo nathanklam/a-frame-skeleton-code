@@ -6,12 +6,20 @@
   </head>
   <body>
     <a-scene id = "scene">
+      #mountains
+      <a-entity position="0 0 -7" rotation="0 300 0" gltf-model = "url(/test.glb)" scale="0.05 0.05 0.05"></a-entity>
+      <a-entity position="-5 0 -6" gltf-model = "url(/test.glb)" scale="0.05 0.05 0.05"></a-entity>
+      <a-entity position="5 0 -6" gltf-model = "url(/test.glb)" scale="0.05 0.05 0.05"></a-entity>
       
+      #snow man
       <a-sphere position="0 2.25 -3" radius="0.5" color="white"></a-sphere>
       <a-sphere position="0 1.25 -3" radius="0.75" color="white"></a-sphere>
       <a-sphere position="0 0.25 -3" radius="1" color="white"></a-sphere>
       <a-sphere position="0.1 2.35 -2.5" radius="0.02" color="black"></a-sphere>
       <a-sphere position="-0.1 2.35 -2.5" radius="0.02" color="black"></a-sphere>
+      <a-cone position="0 2.2 -2.4" rotation="90 0 0" color="tomato" height="0.5" radius-bottom="0.05" radius-top="0"></a-cone>
+
+        #"snow"
         <a-sphere position="-2 2.25 -5" radius="0.05" color="white"></a-sphere>
         <a-sphere position="-3 3.25 -5" radius="0.05" color="white"></a-sphere>
         <a-sphere position="1 4.25 -5" radius="0.05" color="white"></a-sphere>
@@ -19,10 +27,11 @@
         <a-sphere position="-5 0.5 -5" radius="0.05" color="white"></a-sphere>
         <a-sphere position="3 5.5 -5" radius="0.05" color="white"></a-sphere>
         <a-sphere position="-1 4.5 -5" radius="0.05" color="white"></a-sphere>
-        <a-sphere position="2.5 2.5 -5" radius="0.05" color="white"></a-sphere>
+        <a-sphere position="2.5 5.25 -5" radius="0.05" color="white"></a-sphere>
         <a-sphere position="5 3.5 -5" radius="0.05" color="white"></a-sphere>
         <a-sphere position="-4.5 5 -5" radius="0.05" color="white"></a-sphere>
-      <a-cone position="0 2.2 -2.2" rotation="90 0 0" color="tomato" height="0.5" radius-bottom="0.05" radius-top="0"></a-cone>
+      
+      #other stuff
       <a-cylinder position="0 0.75 -10" radius="0.5" color="#FFC65D"></a-cylinder>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="gray"></a-plane>
       <a-sky color="black"></a-sky>

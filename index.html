@@ -3,6 +3,7 @@
   <head>
      <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    //both the rain and collision things here don't seem to work
     <script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
     <script src="https://unpkg.com/aframe-aabb-collider-component/dist/aframe-aabb-collider-component.min.js"></script>
   </head>
@@ -14,8 +15,8 @@
       <a-entity position="0 0 0" sound="src: url(gunfire_and_impacts.wav); autoplay: true; loop: true"></a-entity>
       <a-entity position="0 0 0" sound="src: url(artillery_ambience.wav); autoplay: true; loop: true"></a-entity>
       //footsteps in mud sound, sounds don't work properly at the moment
-      <a-camera id="camera" wasd-controls="acceleration: 10" sound="src: url(footsteps.wav); on: keydown: true'; loop: true" aabb-collider="objects: .collidable;"></a-camera>
-      //next, rain (how does it work???)
+      <a-camera id="camera" wasd-controls="acceleration: 10" sound="src: url(footsteps.wav); playSound: false; loop: true" aabb-collider="objects: .collidable;"></a-camera>
+      //next, rain (how does it work???, why doesnt it work?)
 
       //this is the light i guess
       <a-entity light="type:directional;color:white" position="10 10 10"></a-entity>

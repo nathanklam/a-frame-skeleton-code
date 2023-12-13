@@ -3,17 +3,22 @@
   <head>
      <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/takahirox/aframe-rain/master/build/aframe-rain.min.js"></script>
+    <script src="https://unpkg.com/aframe-aabb-collider-component/dist/aframe-aabb-collider-component.min.js"></script>
   </head>
   <body>  
-    <a-scene fog="type: exponential; density: 0.1 ; near: 0.1; color: gray" id = "scene">    
+    <a-scene fog="type: exponential; density: 0.1 ; near: 0.1; color: gray" id="scene">    
       //trench 
-      <a-entity position="1 0 -13.4" gltf-model = "url(/trench_test.glb)" rotation="0 90 0" scale="0.21 0.21 0.21"></a-entity>
+      <a-entity class="collidable" position="1 0 -13.4" gltf-model="url(/trench_test.glb)" rotation="0 90 0" scale="0.21 0.21 0.21"></a-entity>
       //sfx
       <a-entity position="0 0 0" sound="src: url(gunfire_and_impacts.wav); autoplay: true; loop: true"></a-entity>
       <a-entity position="0 0 0" sound="src: url(artillery_ambience.wav); autoplay: true; loop: true"></a-entity>
       //footsteps in mud sound, sounds don't work properly at the moment
-      <a-camera wasd-controls="acceleration: 10"; sound="src: url(footsteps.wav); on: keydown; loop: true"></a-camera>
-      //next, rain
+      <a-camera id="camera" wasd-controls="acceleration: 10" sound="src: url(footsteps.wav); on: keydown: true'; loop: true" aabb-collider="objects: .collidable;"></a-camera>
+      //next, rain (how does it work???)
+
+      //this is the light i guess
+      <a-entity light="type:directional;color:white" position="10 10 10"></a-entity>
       <a-sky color="black"></a-sky>
 
     </a-scene>

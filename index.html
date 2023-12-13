@@ -4,11 +4,16 @@
      <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   </head>
-  <body>
+  <body>  
     <a-scene fog="type: exponential; density: 0.1 ; near: 0.1; color: gray" id = "scene">    
-      #trench attempt
-      <a-entity position="1 0 -13.4" gltf-model = "url(/trench_test.glb)" rotation="0 90 0" scale="0.21 0.21 0.21" sound="src: url(artillery_ambience.wav); autoplay: true; loop: true"></a-entity>
+      //trench 
+      <a-entity position="1 0 -13.4" gltf-model = "url(/trench_test.glb)" rotation="0 90 0" scale="0.21 0.21 0.21"></a-entity>
+      //sfx
       <a-entity position="0 0 0" sound="src: url(gunfire_and_impacts.wav); autoplay: true; loop: true"></a-entity>
+      <a-entity position="0 0 0" sound="src: url(artillery_ambience.wav); autoplay: true; loop: true"></a-entity>
+      //footsteps in mud sound, sounds don't work properly at the moment
+      <a-camera wasd-controls="acceleration: 10"; sound="src: url(footsteps.wav); on: keydown; loop: true"></a-camera>
+      //next, rain
       <a-sky color="black"></a-sky>
 
     </a-scene>
